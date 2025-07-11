@@ -29,14 +29,14 @@ function verificarChute() {
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou, Princesa!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}! Seu Noivo Te AMA`;
+        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}! SEU NOIVO TE AMA`;
         exibirTextoNaTela('p', mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
         if (chute > numeroSecreto) {
-            exibirTextoNaTela('p', `Tenta de novo, linda. O número secreto é menor que ${chute} `);
+            exibirTextoNaTela('p', `Tente de novo, linda. O número secreto é menor que ${chute} `);
         } else {
-            exibirTextoNaTela('p', `Mias uma vez, gostosa.O número secreto é maior que ${chute} `);
+            exibirTextoNaTela('p', `Mais uma vez, gostosa. O número secreto é maior que ${chute} `);
         }
         tentativas++;
         limparCampo();
